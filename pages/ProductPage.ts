@@ -40,7 +40,7 @@ export class ProductPage {
   }
 
   async addToCart() {
-    await expect(this.page.getByRole('img', {name: (await this.getName()).toString()})).toBeVisible();
+    await expect(this.page.getByRole('img', {name: (await this.getName()).toString(), exact: true})).toBeVisible();
     
     await this.page.getByTestId('add-to-cart').click();
     await expect(this.page.getByTestId('nav-cart')).toBeVisible();
