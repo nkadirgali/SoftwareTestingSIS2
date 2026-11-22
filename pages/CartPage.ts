@@ -8,6 +8,10 @@ export class CartPage {
     await this.page.goto('/checkout');
   }
 
+  async expectSteps() {
+    await expect(await this.page.locator('ul.steps-4.steps-indicator')).toBeVisible();
+  }
+
   async expectProductTitle(name: string) {
     await expect(await this.page.getByTestId('product-title')).toHaveText(name);
   }

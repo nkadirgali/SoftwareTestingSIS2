@@ -19,6 +19,7 @@ test('add a product to the cart and reach checkout', async ({ page }) => {
   await productPage.addToCart();
 
   await cartPage.open();
+  await cartPage.expectSteps();
 
   await cartPage.expectProductTitle(productName);
   await cartPage.expectProductPrice(productPrice);
