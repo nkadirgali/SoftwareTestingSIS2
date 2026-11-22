@@ -4,10 +4,10 @@ node_modules/
 # Playwright output
 /test-results/
 /playwright-report/
-/blob-report/
+#/blob-report/
 /playwright/.cache/
 /playwright/.auth/
-/all-blob-reports/
+#/all-blob-reports/
 
 # Test/report output
 /reports/
